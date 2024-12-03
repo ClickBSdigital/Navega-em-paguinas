@@ -1,0 +1,143 @@
+navegação em paginas , contrua duas paginas que navegue entre si com setas ou botoes que tenha em cada paguina contenha um conteiner com oito blocos de invormação e cada bloco tenha uma imagem um título em baixo e cada bloco seja clicavel pa ser redirecionado a outro endreço cada bloco com borda verde e fundo transparente o conteiner com cor cinza claro , um titulo no conteiner
+O ChatGPT disse:
+ChatGPT
+Aqui está um exemplo de código HTML e CSS para criar duas páginas que navegam entre si usando botões ou setas. Cada página contém um contêiner com oito blocos de informação, cada bloco com uma imagem, um título, borda verde, fundo transparente e funcionalidade de redirecionamento.
+
+Página 1 (pagina1.html)
+html
+Copiar código
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #d3d3d3;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .container h1 {
+            text-align: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .block {
+            border: 2px solid green;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            background-color: transparent;
+            border-radius: 5px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .block:hover {
+            transform: scale(1.05);
+            background-color: #e8f5e9;
+        }
+        .block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .block-title {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .navigation {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+        }
+        .navigation button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .navigation button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo à Página 1</h1>
+        <div class="grid">
+            <div class="block" onclick="location.href='https://example.com/1'">
+                <img src="https://via.placeholder.com/150" alt="Imagem 1">
+                <p class="block-title">Bloco 1</p>
+            </div>
+            <div class="block" onclick="location.href='https://example.com/2'">
+                <img src="https://via.placeholder.com/150" alt="Imagem 2">
+                <p class="block-title">Bloco 2</p>
+            </div>
+            <!-- Repita os blocos para completar os 8 -->
+        </div>
+    </div>
+    <div class="navigation">
+        <button onclick="location.href='pagina2.html'">Ir para a Página 2</button>
+    </div>
+</body>
+</html>
+Página 2 (pagina2.html)
+A estrutura será praticamente igual, alterando o título e o botão de navegação.
+
+html
+Copiar código
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo à Página 2</h1>
+        <div class="grid">
+            <div class="block" onclick="location.href='https://example.com/9'">
+                <img src="https://via.placeholder.com/150" alt="Imagem 9">
+                <p class="block-title">Bloco 9</p>
+            </div>
+            <div class="block" onclick="location.href='https://example.com/10'">
+                <img src="https://via.placeholder.com/150" alt="Imagem 10">
+                <p class="block-title">Bloco 10</p>
+            </div>
+            <!-- Repita os blocos para completar os 8 -->
+        </div>
+    </div>
+    <div class="navigation">
+        <button onclick="location.href='pagina1.html'">Voltar para a Página 1</button>
+    </div>
+</body>
+</html>
+Instruções
+Salve os arquivos pagina1.html e pagina2.html na mesma pasta.
+Substitua os links e imagens conforme necessário.
+Abra o arquivo pagina1.html em um navegador para testar a navegação.
+
+
+
+
+
